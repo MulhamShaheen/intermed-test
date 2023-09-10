@@ -19,13 +19,17 @@ def random_date(start, end):
     return start + timedelta(seconds=random_second)
 
 
+def view_data(request):
+    return render(request, 'test_datatable/main.html')
+
+
 def init_db(request):
     """
     База предоставляется уже предзаполненной, но в случае желания перехода
     на другую СУБД, можно раскомментировать код ниже и сгенерировать тестовые данные.
     """
 
-    Modalities.objects.all().delete()
+    # Modalities.objects.all().delete()
     modalities = [['CT', 'Computed Tomography'],
                   ['MR', 'Magnetic Resonance'],
                   ['PT', 'Positron emission tomography'],
