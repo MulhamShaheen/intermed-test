@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'test_datatable',
     'ajax_datatable',
+    'sqlparse',
+    'termcolor',
+    'pygments',
 ]
 
 MIDDLEWARE = [
